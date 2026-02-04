@@ -25,3 +25,9 @@ console.log(refer)
 const refer2 = user.welcome();
 console.log(refer2);
 // do practice of arrow function
+var user = "dhruv";
+function hello()
+{
+    console.log(`Hello user ${user}`)
+}
+(() => {console.log("This is IIFEA")})();
