@@ -1,35 +1,38 @@
-var x = 10;
-// var allows redeclaration
-// var global scope
-// in let reassignment is possible and it is block specific
-function hello()
-{
-    if(true)
-    {
-        var x = -10;
-        console.log(x);
+/*The let keyword was introduced in ES6 (2015)
+
+Variables declared with let have Block Scope
+
+Variables declared with let must be Declared before use
+
+Variables declared with let cannot be Redeclared in the same scope
+*/
+/*
+The const keyword was introduced in ES6 (2015)
+
+Variables defined with const cannot be Redeclared
+
+Variables defined with const cannot be Reassigned
+
+Variables defined with const have Block Scope
+*/
+/*
+
+*/ 
+
+var a =23;
+const d =34;
+function greet(){
+    if(true) // let is having block scope  and var is not block scope 
+        {
+        const d = 4;
+        let a = 32;
+        console.log(a);
+        console.log(d);
     }
-    console.log(x);
+
+    console.log(a);
 }
-hello();
-console.log(x);
-console.log('first');
-// document.write('From JS ')
-// tutorial point -- do course
-// console.log(a);
-// console.log(5**2);
-// where is console of js
-// browser has the console 
-// js scops  and window scope
-// var defines the property in window object
-//let  defines the property in javascript
-// Key Differences 
-// Scope:
-// var: Function-scoped. A variable declared with var inside a function is available everywhere within that function. If declared outside, it becomes global.
-// let: Block-scoped. It is only accessible within the immediate curly braces {} (like in an if statement or a for loop) where it was defined.
-// Redeclaration:
-// var: Allows you to redeclare the same variable name within the same scope without error.
-// let: Does not allow redeclaration in the same scope; doing so throws a SyntaxError.
-// Hoisting:
-// var: Declarations are hoisted to the top of their scope and initialized as undefined. You can reference them before they are declared in the code.
-// let: Declarations are hoisted but not initialized. Accessing them before declaration results in a ReferenceError because they stay in a "Temporal Dead Zone". 
+console.log(d);
+greet();
+console.log(a);
+Document.console.write(a);
